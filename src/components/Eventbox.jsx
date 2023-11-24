@@ -1,10 +1,12 @@
 import React from 'react';
-import {Typography,Grid, Card, CardContent } from '@mui/material';
+import { Typography, Grid, Card, CardContent, CardActionArea } from '@mui/material';
+import './Eventbox.css';
 const EventBox = ({ title, description }) => {
   return (
-    <Grid item xs={12} sm={6} md={4}>
-      <Card style={{ marginBottom: '20px' }}>
-        <CardContent>
+    <Grid item>
+      <Card className="Card" style={{ marginBottom: '20px' }}>
+          <CardActionArea>
+        <CardContent >
           <Typography variant="h6" gutterBottom>
             {title}
           </Typography>
@@ -12,6 +14,7 @@ const EventBox = ({ title, description }) => {
             {description}
           </Typography>
         </CardContent>
+        </CardActionArea>
       </Card>
     </Grid>
   );

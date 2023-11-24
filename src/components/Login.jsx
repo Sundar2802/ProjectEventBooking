@@ -44,12 +44,12 @@ const Login = () => {
     <ThemeProvider theme={theme}>
       <div style={containerStyle}>
        
-        <header style={{ background: '#303030', padding: '20px', textAlign: 'center', marginBottom: '20px', opacity: '80%', position: 'relative' }}>
+        <header style={{ background: '#303030', padding: '2px', textAlign: 'center', marginBottom: '20px', opacity: '80%', position: 'relative' }}>
           
           <Typography variant="h4" component="div" color="textPrimary">
             <center>Event Management Organization</center>
             
-          <Link to = '/'><HomeIcon fontSize="large"color="primary" sx={{marginLeft: '1300px'}} /></Link>
+          <Link to = '/'><HomeIcon fontSize="large"color="primary" sx={{marginRight: '1399px',marginBottom: '20px'}} /></Link>
           </Typography>
          
         </header>

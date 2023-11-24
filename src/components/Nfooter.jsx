@@ -37,9 +37,9 @@ const Footer = () => {
               Services We Offer
             </Typography>
             <List className="services-list" style={{ padding: 0 }}>
-              <ListItem>Wedding Events</ListItem>
-              <ListItem>Corporate Events</ListItem>
-              <ListItem>Social Events</ListItem>
+              <ListItem>Gallery</ListItem>
+              <ListItem>Blog</ListItem>
+              <ListItem>Feedback</ListItem>
             </List>
           </Grid>
           <Grid item xs={12} sm={4}>
@@ -47,14 +47,14 @@ const Footer = () => {
               Reach Us (India)
             </Typography>
             <Typography variant="body1" gutterBottom>
-              India: 5th Floor Sunteck Centre, Subhash Road, GandhiNagar, Tamil Nadu – 400057
+              EVENT TECH : 5th Floor Sunteck Centre, Anna Road,Chennai- 600 001 Tamil Nadu
             </Typography>
             <Typography variant="body1" gutterBottom>
               +91 63xxxxxx
             </Typography>
             <Typography variant="body1">
-              <Link href="mailto:admin@sasuru.co.in" color="inherit">
-                admin@sasuru.co.in
+              <Link href="mailto:sundar16pandian@gmail.com" color="inherit">
+                sachin@gmail.com
               </Link>
             </Typography>
           </Grid>

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import { TextField, Button, Container, Typography, Paper, Box} from '@mui/material';
+import { TextField, Button, Container, Typography, Paper, Box, Alert, } from '@mui/material';
+import { Link } from 'react-router-dom';
+
 import backgroundImage from "E:\\pexels-monstera-production-5709009.jpg";
+
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +14,7 @@ const RegistrationForm = () => {
   });
 
   const [passwordError, setPasswordError] = useState('');
+  const [registrationSuccess, setRegistrationSuccess] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,7 +23,7 @@ const RegistrationForm = () => {
       [name]: value,
     });
     if (name === 'password') {
-      const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8}$/;
+      const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
       if (!passwordRegex.test(value)) {
         setPasswordError('Password must be at least 8 characters long and contain at least one letter and one number.');
       } else {
@@ -35,6 +39,8 @@ const RegistrationForm = () => {
       alert("Passwords don't match");
       return;
     }
+
+    setRegistrationSuccess(true);
 
     console.log('Form submitted with data:', formData);
   };
@@ -104,13 +110,24 @@ const RegistrationForm = () => {
               value={formData.confirmPassword}
               onChange={handleChange}
             />
+            {registrationSuccess && (
+              <Alert variant="filled" severity="success" style={{ marginTop: '10px' }}>
+                Registration Successful!{' '}
+                <Typography >
+                <Link to='/Login' color='inherit'>
+                    {'<- Go to Login for Logging in'}
+                    </Link>
+                 
+                </Typography>
+              </Alert>
+            )}
             <Button
               type="submit"
               fullWidth
               variant="contained"
               color="primary"
               style={{ marginTop: '20px' }}
-              disabled={passwordError}
+              disabled={passwordError || registrationSuccess}
             >
               Register
             </Button>
