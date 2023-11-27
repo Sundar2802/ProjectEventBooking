@@ -3,14 +3,18 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Button, Container, Avatar, Grid} from '@mui/material';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
+import { useContext } from 'react';
 
 
 import eventImage from 'E:\\event-planning3-edited.jpg'; 
 import EventBox from './Eventbox';
 import Footer from './Nfooter';
+import { userContext } from './Context';
 
 
 const Home = () => {
+
+  const [user, setuser] = useContext(userContext);
   return (
     <div style={{ minHeight: '10vh', backgroundColor: '' }}>
       <Navbar/>
@@ -18,9 +22,12 @@ const Home = () => {
         
         <img src={eventImage} alt="Event Management" style={{ width: '100%', marginBottom: '20px', borderRadius: '8px' }} />
 
+
         <Typography variant="h4" gutterBottom>
           Welcome to Our Event Management Platform
+
         </Typography>
+          
         <Typography variant="body8" paragraph>
           Plan and book your events with ease. From weddings to corporate gatherings, we've got you covered.
         </Typography>

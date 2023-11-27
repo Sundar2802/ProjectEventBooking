@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 
 
+import { userContext } from './Context';
+import { useContext } from 'react';
 const Navbar = () => {
+  const [user, setuser] = useContext(userContext);
+
   return (
     <div style={{ minHeight: '10vh' }}>
       <AppBar position="static" style={{ backgroundColor: '#333' }}>
@@ -17,8 +21,10 @@ const Navbar = () => {
             <Link to='/' color='inherit'><Typography color='white'><Button color="inherit" href="#home">Home</Button></Typography></Link>
             <Link to='/About' color='inherit'><Typography color='white'><Button color="inherit" href="#about">About</Button></Typography></Link>
             <Link to='/Feedback' color='inherit'><Typography color='white'><Button color="inherit" href="#feedback">Feedback</Button></Typography></Link>
-            <Link to='/Login'><Button variant="outlined" >Login</Button></Link>
+            {!user ?  <Link to='/Login'><Button variant="outlined" >Login</Button></Link> : null}
+           
           </ButtonGroup>
+          {user ? <h3 style = {{color : 'white'}}>{user}</h3> : null}
             <Avatar sx={{ bgcolor: 'deepOrange[500]' }}><AccountCircleOutlinedIcon/></Avatar>
         </Toolbar>
       </AppBar>

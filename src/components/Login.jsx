@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
@@ -8,11 +8,14 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import backgroundImage from "E:\\pexels-monstera-production-5709009.jpg";
 import HomeIcon from '@mui/icons-material/Home';
 import axios from 'axios';
+import { userContext } from './Context';
 const Login = () => {
   const navigate=useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
+  const [user, setuser] = useContext(userContext);
 
   const theme = createTheme({
     palette: {
@@ -34,8 +37,11 @@ const Login = () => {
     const api1=`http://localhost:1000/users?name=${username}`
     const response = await axios.get(api1)
     if(response.data.length!==0  && response.data[0].password===password)
+
     {
+      setuser(username);
       navigate('/')
+      
     }
     else{
       navigate('/Login')
