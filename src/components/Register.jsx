@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { TextField, Button, Container, Typography, Paper, Box, Alert, } from '@mui/material';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 import backgroundImage from "E:\\pexels-monstera-production-5709009.jpg";
 
@@ -45,6 +46,14 @@ const RegistrationForm = () => {
     console.log('Form submitted with data:', formData);
   };
 
+
+  const handleSubmit1 = () => {
+    const api="http://localhost:1000/users";
+    if (formData.password === formData.confirmPassword) {
+      axios.post(api, {name : formData.username, email: formData.email, password : formData.confirmPassword})
+
+    }
+  }
   return (
     <Box
       sx={{
@@ -128,6 +137,7 @@ const RegistrationForm = () => {
               color="primary"
               style={{ marginTop: '20px' }}
               disabled={passwordError || registrationSuccess}
+              onClick={handleSubmit1}
             >
               Register
             </Button>

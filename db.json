@@ -1,22 +1,22 @@
 {
-    "users" : [
-        {
-            "name" : "sundar",
-            "email" : "sundar@gmail.com",
-            "password" : "12345678",
-            "id" : 1
-        },
-        {
-            "name" : "mani",
-            "email" : "mani@gmail.com",
-            "password" : "12345",
-            "id" : 2
-        },
-        {
-            "name" : "sachin",
-            "email" : "sachin@gmail.com",
-            "password" : "1234567890",
-            "id" : 3
-        }
-    ]
+  "users": [
+    {
+      "name": "sachin",
+      "email": "727722euit154@skcet.ac.in",
+      "password": "sach1234",
+      "id": 1
+    },
+    {
+      "name": "srit",
+      "email": "",
+      "password": "",
+      "id": 2
+    },
+    {
+      "name": "srinithi",
+      "email": "727722euit185@skcet.ac.in",
+      "password": "9999llll",
+      "id": 3
+    }
+  ]
 }

@@ -19,7 +19,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './Navbar';
 import Footer from './Nfooter';
 
-const WeddingEvent = () => {
+const Social = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [formData, setFormData] = useState({
     
@@ -78,14 +78,14 @@ const WeddingEvent = () => {
   return (
     <div style={{ minHeight: '10vh' }}>
       <Navbar />
-      <div style={{ textAlign: "center", fontSize: "40px", fontFamily: "Fantasy" }}>Wedding</div>
+      <div style={{ textAlign: "center", fontSize: "40px", fontFamily: "Fantasy" }}>Social Event</div>
 
       <Container style={{ marginTop: '40px' }}>
         <Grid container spacing={3} alignItems="center">
 
           <Grid item xs={12} sm={6}>
             <Typography variant="h4" gutterBottom>
-              <center>Gallery</center>
+              Gallery
             </Typography>
             <div className="cont">
               <img
@@ -153,4 +153,4 @@ const WeddingEvent = () => {
   );
 };
 
-export default WeddingEvent;
+export default Social;

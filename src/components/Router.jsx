@@ -3,12 +3,12 @@ import { createBrowserRouter } from 'react-router-dom'
 import Navbar from './Home';
 import Login from './Login';
 import RegistrationForm from './Register';
-import SocialEvent from './Socialevent';
+import Social from './Social';
 import WeddingEvent from './Wedding';
 import CorporateEvent from './Corporateevent';
 import SportingEvent from './Sportingevent';
 import AboutUs from './About';
-import Contact from './Contact';
+import Feedback from './Feedback';
 import Concerts from './Conserts';
 import HolidayEvent from './Holiday';
     
@@ -19,12 +19,12 @@ import HolidayEvent from './Holiday';
                 {path: '/', element: <Navbar/>},
                 {path: '/Login', element:<Login/> },
                 {path: '/Register', element:<RegistrationForm/>},
-                {path: '/Socialevent', element:<SocialEvent/>},
+                {path: '/Social', element:<Social/>},
                 {path: '/Weddingevent', element:<WeddingEvent/>},
                 {path: '/Corporate', element:<CorporateEvent/>},
                 {path: '/Sporting', element:<SportingEvent/>},
                 {path: '/About', element:<AboutUs/>},
-                {path: '/Contact', element:<Contact/>},
+                {path: '/Feedback', element:<Feedback/>},
                 {path: '/Concerts', element:<Concerts/>},
                 {path: '/Holi', element:<HolidayEvent/>}
                 

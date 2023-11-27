@@ -28,7 +28,7 @@ const Home = () => {
           <h2><center>Explore our services and make your event unforgettable!</center></h2>
         </Typography>
         <Grid sx = {{padding : '50px'}} container rowSpacing={2} columnSpacing={3} columnGap={5} alignItems={'center'} justifyContent={'space-around'} >
-          <Link to='/Socialevent'>
+          <Link to='/Social'>
             <Button>
 
             <EventBox title="Social Event" description="Birthday parties,Anniversary celebrations,Graduation parties" />
