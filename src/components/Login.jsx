@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import backgroundImage from "E:\\pexels-monstera-production-5709009.jpg";
+import backgroundImage from "./image/img6.jpg";
 import HomeIcon from '@mui/icons-material/Home';
 import axios from 'axios';
 import { userContext } from './Context';

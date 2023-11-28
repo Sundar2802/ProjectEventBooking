@@ -3,7 +3,7 @@ import { TextField, Button, Container, Typography, Paper, Box, Alert, } from '@m
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-import backgroundImage from "E:\\pexels-monstera-production-5709009.jpg";
+import backgroundImage from "./image/img8.jpg";
 
 
 const RegistrationForm = () => {

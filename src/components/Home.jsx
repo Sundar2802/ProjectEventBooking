@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 import { useContext } from 'react';
 
 
-import eventImage from 'E:\\event-planning3-edited.jpg'; 
+import eventImage from './image/img2.jpg'; 
 import EventBox from './Eventbox';
 import Footer from './Nfooter';
 import { userContext } from './Context';
